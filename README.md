@@ -144,7 +144,7 @@ Bash
 ```
 # Dê um duplo-clique no arquivo 'install.bat'.
 # Ou execute no prompt de comando:
-install.bat
+.\install.bat
 ```
 
 _(Após a instalação, o terminal instruirá você a editar o `rodar.sh` ou `rodar.bat` com sua chave de API.)_
