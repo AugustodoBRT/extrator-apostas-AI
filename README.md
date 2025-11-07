@@ -99,12 +99,15 @@ Para evitar que o Excel/Sheets pule linhas, use este fluxo:
 
 ## 🧰 Pré-requisitos
 
-- **Python 3.7+**
-    
-- **Git**
-    
-- **Chave de API do Google Gemini** (acesso aos modelos `gemini-2.5-flash` e `gemini-2.5-pro`).
-    
+- **[Python 3.7+](https://www.python.org/downloads/)**  
+  Certifique-se de que o Python está instalado e acessível pelo terminal (verifique com `python --version`).
+
+- **[Git](https://git-scm.com/downloads)**  
+  Necessário para clonar o repositório e gerenciar versões do projeto.
+
+- **[Chave de API do Google Gemini](https://aistudio.google.com/app/apikey)**  
+  Requer uma conta no Google AI Studio para acessar os modelos `gemini-2.5-flash` e `gemini-2.5-pro`.
+
 
 ---
 
