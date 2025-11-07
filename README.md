@@ -60,13 +60,23 @@ A ordem de colunas esperada é: **[COLUNA VAZIA (A)] – DATA – ESPORTE – PA
 
 ### 🧾 Importando o CSV
 
-Para evitar que o Excel/Sheets pule linhas, use este fluxo:
+- **Google Sheets (recomendado)**:
+  0. Antes de adicionar um CSV novo, SEMPRE clique na celula abaixo da ultima importada (ou se for a primeira em baixo da DATA) e que seja na coluna A (O CSV sempre importa pulando a primeira coluna(A))
+  1. Abra a planilha-exemplo no Google Sheets.  
+  2. **Arquivo → Importar → Upload**.  
+  3. Selecione `NOVAS_APOSTAS.csv`.  
+  4. Em **Importar dados**, escolha:
+     - **Replace data at selected cell**  
+     - **Separator type:** `Comma`  
+  5. Clique em **Importar dados**.
 
-1.  Gere o arquivo `NOVAS_APOSTAS.csv` executando o `rodar.sh` ou `rodar.bat`.
-2.  Abra sua planilha principal (ou a planilha-exemplo).
-3.  Abra o `NOVAS_APOSTAS.csv` e **copie apenas as linhas de dados**.
-4.  Na sua planilha principal, clique na **primeira célula vazia da Coluna B (onde deve começar a DATA)**.
-5.  **Cole** os dados (`Ctrl+V`).
+- **Excel / LibreOffice**:
+  1. Abra `NOVAS_APOSTAS.csv`.  
+  2. **Copie apenas as linhas de dados** (sem o cabeçalho).  
+  3. Cole na sua planilha principal, a partir da **coluna B (DATA)**.  
+  4. Apague o CSV após importar para que o próximo processamento gere um arquivo limpo.
+
+> Observação: o Google Sheets importa melhor quando você usa **Replace data at selected cell** com **Comma**. Se usar outro modo, confira separador e localização antes de substituir dados.
 
 <p align="center">
   <img src="Example.png" alt="Exemplo de imagem do Extrator-Apostas-AI" width="800">
