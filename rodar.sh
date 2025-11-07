@@ -11,4 +11,4 @@ echo "Iniciando o script Python..."
 python "$SCRIPT_DIR/extrator/ocr_extrair.py"
 
 deactivate
-echo "Processo concluído."
+echo "Processo finalizado."
