@@ -1,0 +1,13 @@
+# Ambiente Virtual
+.venv/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivo de Saida do Script
+NOVAS_APOSTAS.csv
+
+# Conteudo das pastas de imagem (mantem as pastas)
+imagens/*
+imagens_processadas/*
