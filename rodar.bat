@@ -10,5 +10,5 @@ echo "Iniciando o script Python..."
 REM CORREÇÃO AQUI: adicione "extrator\"
 python "%~dp0extrator\ocr_extrair.py"
 
-echo "Processo concluido."
+echo "Processo finalizado."
 pause
