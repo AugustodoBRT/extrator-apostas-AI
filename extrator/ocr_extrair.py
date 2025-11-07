@@ -144,6 +144,12 @@ try:
                 try:
                     imagem = Image.open(caminho_completo_imagem)
                     resposta = modelo_obj.generate_content([prompt, imagem])
+                    
+                    
+                    # Fecha o arquivo de imagem para liberar o bloqueio do Windows
+                    imagem.close()
+                    
+                    
                     print(f"  🔹 Resposta bruta: {resposta.text}")
                     
                     clean_text = resposta.text.strip().replace("```json", "").replace("```", "").strip()
@@ -179,7 +185,6 @@ try:
                         odd_limpa = odd_str.replace(".", ",")
                         
                         # --- LÓGICA DE CLASSIFICAÇÃO DE ESPORTE (Pode alterar) ---
-                        # Adicione ou remova esportes deste "mapa"
                         esportes_validos_map = {
                             "futebol": "Futebol",
                             "basquete": "Basquete",
