@@ -61,14 +61,14 @@ A ordem de colunas esperada é: **[COLUNA VAZIA (A)] – DATA – ESPORTE – PA
 ### 🧾 Importando o CSV
 
 - **Google Sheets (recomendado)**:
-  0. Antes de adicionar um CSV novo, SEMPRE clique na celula abaixo da ultima importada (ou se for a primeira em baixo da DATA) e que seja na coluna A (O CSV sempre importa pulando a primeira coluna(A))
-  1. Abra a planilha-exemplo no Google Sheets.  
-  2. **Arquivo → Importar → Upload**.  
-  3. Selecione `NOVAS_APOSTAS.csv`.  
-  4. Em **Importar dados**, escolha:
+  1. Antes de adicionar um CSV novo, SEMPRE clique na celula abaixo da ultima importada (ou se for a primeira em baixo da DATA) e que seja na coluna A (O CSV sempre importa pulando a primeira coluna(A))
+  2. Abra a planilha-exemplo no Google Sheets.  
+  3. **Arquivo → Importar → Upload**.  
+  4. Selecione `NOVAS_APOSTAS.csv`.  
+  5. Em **Importar dados**, escolha:
      - **Replace data at selected cell**  
      - **Separator type:** `Comma`  
-  5. Clique em **Importar dados**.
+  6. Clique em **Importar dados**.
 
 - **Excel / LibreOffice**:
   1. Abra `NOVAS_APOSTAS.csv`.  
