@@ -50,6 +50,18 @@ Ele foi criado para **automatizar o processo de registro de apostas**, gerando u
 
 ---
 
+## 🧭 Roadmap
+
+| Etapa | Descrição | Status |
+|-------|------------|--------|
+| ✅ **Importação Bet Analytix** | CSV compatível com o site Bet-Analytix. | **Concluído** |
+| 🚧 **Classificação Automática por Tipster** | Identificar e agrupar apostas de diferentes tipsters automaticamente. | **Em Desenvolvimento** |
+| 🧠 **Execução Baseada em Eventos** | Processar novas imagens automaticamente a partir de notificações (ex: grupos do Telegram). | **Planejado** |
+| 🧩 **Integração com Smartphone** | Aplicativo para inserir as imagens e gerar o arquivo CSV. | **Planejado** |
+| ⚙️ **Interface Gráfica (GUI)** | Criar versão com interface simples para uso sem terminal. | **Planejado** |
+
+---
+
 ## ⚠️ Aviso Importante
 
 Este projeto foi desenvolvido para funcionar **somente com a planilha-exemplo oficial** (ou uma que siga a mesma estrutura).
