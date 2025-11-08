@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# --- CONFIGURAÇÃO ---
+# Cole sua chave de API aqui
+export GOOGLE_API_KEY="SUA-CHAVE-API-AQUI"
+# --------------------
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+echo "Ativando ambiente virtual..."
+source "$SCRIPT_DIR/.venv/bin/activate"
+
+echo "Iniciando o script Python (Versão Bet-Analytix)..."
+# Executa o NOVO script
+python "$SCRIPT_DIR/extrator/ocr_extrair_betanalytix.py"
+
+deactivate
+echo "Processo concluído."
