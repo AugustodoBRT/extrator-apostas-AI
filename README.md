@@ -1,9 +1,11 @@
 
 ---
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.7%2B-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Google%20Gemini-API-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Beta-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Ativo-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Versão-1.1.0-purple?style=for-the-badge">
 </p>
 
 <h1 align="center">🧠 Extrator-Apostas-AI</h1>
@@ -18,11 +20,9 @@
 - [🧩 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Funcionalidades](#-funcionalidades)
 - [⚠️ Aviso Importante](#️-aviso-importante)
-- [📁 Estrutura de Pastas](#-estrutura-de-pastas)
 - [🧰 Pré-requisitos](#-pré-requisitos)
 - [🛠️ Instalação](#️-instalação)
 - [▶️ Como Usar](#️-como-usar)
-- [🧪 Exemplo de Saída](#-exemplo-de-saída)
 - [📜 Licença](#-licença)
 
 ---
@@ -55,55 +55,6 @@ Ele foi criado para **automatizar o processo de registro de apostas**, gerando u
 Este projeto foi desenvolvido para funcionar **somente com a planilha-exemplo oficial** (ou uma que siga a mesma estrutura).
 
 A ordem de colunas esperada é: **[COLUNA VAZIA (A)] – DATA – ESPORTE – PARTIDA – TIP – CASA – VALOR – ODD – RESULTADO – LUCRO/PERDA**
-
-📥 **Planilha Exemplo:** `exemplo_planilha.xlsx` (inclusa no repositório)
-
-### 🧾 Importando o CSV
-
-- **Google Sheets (recomendado)**:
-  1. Antes de adicionar um CSV novo, SEMPRE clique na celula abaixo da ultima importada (ou se for a primeira em baixo da DATA) e que seja na coluna A (O CSV sempre importa pulando a primeira coluna(A))
-  2. Abra a planilha-exemplo no Google Sheets.  
-  3. **Arquivo → Importar → Upload**.  
-  4. Selecione `NOVAS_APOSTAS.csv`.  
-  5. Em **Importar dados**, escolha:
-     - **Replace data at selected cell**  
-     - **Separator type:** `Comma`  
-  6. Clique em **Importar dados**.
-
-- **Excel / LibreOffice**:
-  1. Abra `NOVAS_APOSTAS.csv`.  
-  2. **Copie apenas as linhas de dados** (sem o cabeçalho).  
-  3. Cole na sua planilha principal, a partir da **coluna B (DATA)**.  
-  4. Apague o CSV após importar para que o próximo processamento gere um arquivo limpo.
-
-> Observação: o Google Sheets importa melhor quando você usa **Replace data at selected cell** com **Comma**. Se usar outro modo, confira separador e localização antes de substituir dados.
-
-<p align="center">
-  <img src="Example.png" alt="Exemplo de imagem do Extrator-Apostas-AI" width="800">
-</p>
-
----
-
-## 📁 Estrutura de Pastas
-
-```bash
-/extrator-apostas-AI
-│
-├── .venv/                 # Ambiente virtual (ignorado)
-├── imagens/               # Coloque seus screenshots aqui
-├── imagens_processadas/   # Onde vão as imagens já processadas
-│
-├── install.sh             # Script de instalação automática (Linux/Mac)
-├── install.bat            # Script de instalação automática (Windows)
-├── rodar.sh               # Lançador principal (Linux/Mac)
-├── rodar.bat              # Lançador principal (Windows)
-│
-├── extrator/
-│   ├── ocr_extrair.py     # Script principal
-│   └── requirements.txt   # Lista de dependências
-│
-└── README.md
-````
 
 ---
 
@@ -197,7 +148,7 @@ Bash
 mkdir imagens imagens_processadas
 ```
 
-### 4️⃣ Adicionar a chave da API (Último Passo)
+### 4️⃣ Adicionar a chave da API
 
 Após a instalação, você deve editar o script lançador:
 
@@ -206,8 +157,8 @@ Após a instalação, você deve editar o script lançador:
 Bash
 
 ```
-nano rodar.sh
-# Edite a linha 3 e coloque sua chave:
+nano linux.sh
+Edide a linha
 export GOOGLE_API_KEY="SUA_CHAVE_AQUI"
 ```
 
@@ -216,8 +167,7 @@ export GOOGLE_API_KEY="SUA_CHAVE_AQUI"
 Bash
 
 ```
-notepad rodar.bat
-# Edite a linha 4:
+notepad windows.bat
 set "GOOGLE_API_KEY=SUA_CHAVE_AQUI"
 ```
 
@@ -237,18 +187,33 @@ set "GOOGLE_API_KEY=SUA_CHAVE_AQUI"
     
 4. Importe-o para sua planilha conforme as instruções acima.
     
+📥 **Planilha Exemplo:** `exemplo_planilha.xlsx` (inclusa no repositório)
 
----
+### 🧾 Importando o CSV
 
-## 🧪 Exemplo de Saída
+- **Google Sheets (recomendado)**:
+  1. Antes de adicionar um CSV novo, SEMPRE clique na celula abaixo da ultima importada (ou se for a primeira em baixo da DATA) e que seja na coluna A (O CSV sempre importa pulando a primeira coluna(A))
+  2. Abra a planilha-exemplo no Google Sheets.  
+  3. **Arquivo → Importar → Upload**.  
+  4. Selecione `NOVAS_APOSTAS.csv`.  
+  5. Em **Importar dados**, escolha:
+     - **Replace data at selected cell**  
+     - **Separator type:** `Comma`  
+  6. Clique em **Importar dados**.
 
-Code snippet
+- **Excel / LibreOffice**:
+  1. Abra `NOVAS_APOSTAS.csv`.  
+  2. **Copie apenas as linhas de dados** (sem o cabeçalho).  
+  3. Cole na sua planilha principal, a partir da **coluna B (DATA)**.  
+  4. Apague o CSV após importar para que o próximo processamento gere um arquivo limpo.
 
-```
-BLANK,DATA,ESPORTE,PARTIDA,TIP,CASA,VALOR,ODD,RESULTADO,LUCRO/PERDA
-,06/11/2025,FUTEBOL,Multipla,"Tripla - Bayern, Arsenal e Mônaco Para Vencerem",Betano,2,5.50,,
-,06/11/2025,BASQUETE,Lakers vs Celtics,Vencedor: Lakers,bet365,10,1.80,,
-```
+> Observação: o Google Sheets importa melhor quando você usa **Replace data at selected cell** com **Comma**. Se usar outro modo, confira separador e localização antes de substituir dados.
+
+Exemplo de Planilha utilizando o extrator:
+
+<p align="center">
+  <img src="Example.png" alt="Exemplo de imagem do Extrator-Apostas-AI" width="800">
+</p>
 
 ---
 
