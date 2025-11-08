@@ -183,8 +183,9 @@ export GOOGLE_API_KEY="SUA_CHAVE_AQUI"
 Bash
 
 ```
-notepad windows.bat
-set "GOOGLE_API_KEY=SUA_CHAVE_AQUI"
+No cmd (Na pasta onde o repositório foi baixado)
+setx GOOGLE_API_KEY "TUA_CHAVE_AQUI"
+
 ```
 
 ---
