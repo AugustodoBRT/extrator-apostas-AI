@@ -54,7 +54,11 @@ Ele foi criado para **automatizar o processo de registro de apostas**, gerando u
 
 Este projeto foi desenvolvido para funcionar **somente com a planilha-exemplo oficial** (ou uma que siga a mesma estrutura).
 
-A ordem de colunas esperada é: **[COLUNA VAZIA (A)] – DATA – ESPORTE – PARTIDA – TIP – CASA – VALOR – ODD – RESULTADO – LUCRO/PERDA**
+A ordem de colunas esperada é: 
+
+```estrutura
+[COLUNA VAZIA (A)] – DATA – ESPORTE – PARTIDA – TIP – CASA – VALOR – ODD – RESULTADO – LUCRO/PERDA
+```
 
 ---
 
@@ -108,7 +112,7 @@ Bash
 .\install.bat
 ```
 
-_(Após a instalação, o terminal instruirá você a editar o `rodar.sh` ou `rodar.bat` com sua chave de API.)_
+_(Após a instalação, o terminal instruirá você a editar o `linux.sh` ou `windows.bat` com sua chave de API.)_
 
 ### 3️⃣ Instalação Manual
 
@@ -179,9 +183,9 @@ set "GOOGLE_API_KEY=SUA_CHAVE_AQUI"
     
 2. Execute o script no terminal:
     
-        Linux / macOS: ./rodar.sh
+        Linux / macOS: ./linux.sh
     
-        Windows: rodar.bat
+        Windows: windows.bat
     
 3. O script processará as imagens e criará o arquivo NOVAS_APOSTAS.csv.
     
