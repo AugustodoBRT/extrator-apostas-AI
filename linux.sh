@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GOOGLE_API_KEY="SUA_CHAVE_API_VAI_AQUI"
+export GOOGLE_API_KEY="SUA-CHAVE-API-AQUI"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
